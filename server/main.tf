@@ -1,3 +1,9 @@
+provider "aws" {
+  # MODIFY this line to look for 1.20.0 or greater
+  version = ">= 1.20.0"
+}
+
+
 resource "aws_key_pair" "default" {
   key_name   = "${var.identity}-key"
   public_key = var.public_key
